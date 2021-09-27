@@ -5,4 +5,8 @@
 /.vs/Todo/v16/Browse.VC.db-shm
 /.vs/Todo/v16/Browse.VC.opendb
 /.vs/Todo/v16/Browse.VC.db-wal
-/.vs/Todo/v16
+/.vs/Todo/v16/
+/.git/
+/.vscode/
+/Debug/
+/x64/
