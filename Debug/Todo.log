@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\work\Todo1\main.cpp(2,9): fatal error C1083: 포함 파일을 열 수 없습니다. 'menu.h': No such file or directory
+  todo.cpp
+  menu.cpp
+  코드를 생성하고 있습니다...
