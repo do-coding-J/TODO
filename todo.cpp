@@ -415,7 +415,7 @@ void Todo::test()
     Todo_line line;
     system("cls");
     cout << "일정을 추가합니다." << endl;
-    line.todo_name = set_todo_name();
+    line.todo_name = "일정 이름";
     system("cls");
     cout << "시작시간을 입력합니다." << endl;
     struct tm* temp;
@@ -432,8 +432,7 @@ void Todo::test()
     line.todo_et = *temp;
     system("cls");
     cout << "일정 태그를 입력합니다." << endl;
-    getline(cin, temp2);
-    line.todo_tag = temp2;
+    line.todo_tag = "태그 이름";
     temp = localtime(&timer);
     temp->tm_year += 1900;
     temp->tm_mon += 1;

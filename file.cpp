@@ -1,7 +1,6 @@
 #include "file.h"
 #include <iostream>
 
-using namespace std;
 
 void File::todo_file()
 {
@@ -59,18 +58,21 @@ void File::save_todo()
 void File::read_todo()
 {
 	fin.open("todo.txt");
-	while (fin)
+	while (!fin.eof())
 	{
 		getline(fin, temp);
 		index = 0;
+		//cout << temp << endl;
+		if (temp.size() == 0) break;
 		while ((pos = temp.find(divider)) != string::npos)
 		{
 			token = temp.substr(0,pos);
-			cout << token << endl;
+			//cout << token << endl;
 			spliter(token);
 			temp.erase(0, pos + divider.length());
 		}
 		Todo_lines.push_back(temp_struct);
+		//cout << "push" << endl;
 	}
 
 	cout << "불러왔습니다. " << endl;
@@ -115,24 +117,24 @@ tm File::split_time(string token)
 		token2 = token.substr(0, pos2);
 		switch (index2) {
 		case 1:
-			temp_struct.todo_st.tm_year = stoi(token2);
+			temp_struct.todo_pt.tm_year = stoi(token2);
 			break;
 		case 2:
-			temp_struct.todo_st.tm_mon = stoi(token2);
+			temp_struct.todo_pt.tm_mon = stoi(token2);
 			break;
 		case 3:
-			temp_struct.todo_st.tm_mday = stoi(token2);
+			temp_struct.todo_pt.tm_mday = stoi(token2);
 			break;
 		case 4:
-			temp_struct.todo_st.tm_hour = stoi(token2);
+			temp_struct.todo_pt.tm_hour = stoi(token2);
 			break;
 		case 5:
-			temp_struct.todo_st.tm_min = stoi(token2);
+			temp_struct.todo_pt.tm_min = stoi(token2);
 			break;
 		default:
 			break;
 		}
 		token.erase(0, pos2 + divider_day.length());
 	}
-	return temp_struct.todo_st;
+	return temp_struct.todo_pt;
 }

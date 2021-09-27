@@ -18,7 +18,7 @@ class Menu : public File {
 		void sleep_delay();
 
 	private:
-		int menu_num;
+		int menu_num=0;
 		string temp;
 
 		enum num_menu {

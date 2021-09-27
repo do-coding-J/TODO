@@ -5,12 +5,12 @@
 class File : public Todo{
 	private:
 		size_t pos = 0, pos2 = 0;
-		int index, index2;
+		int index=0, index2=0;
 		string temp;
 		string  token, token2, divider = "|", divider_day = "/", divider_time = ":";
+		string st_date, et_date, pt_date;
 
-
-		struct Todo::Todo_line temp_struct = { 0 };
+		struct Todo::Todo_line temp_struct;
 
 		ofstream fout;
 		ifstream fin;

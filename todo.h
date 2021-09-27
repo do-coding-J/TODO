@@ -11,9 +11,9 @@ using namespace std;
 class Todo{
     private:
         string temp, temp2;
-        int view_num;
-        int saved_year;
-        int days_in_month; // 0이면 31일, 1이면 30일, 2면 28/29일
+        int view_num=0;
+        int saved_year=0;
+        int days_in_month=0; // 0이면 31일, 1이면 30일, 2면 28/29일
         bool leap_year = 0; // 0이면 28일 1이면 29일
 
     protected:

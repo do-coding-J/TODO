@@ -3,8 +3,6 @@
 #include<Windows.h>
 #include "menu.h"
 
-
-
 using namespace std;
 
 void Menu::running()
@@ -99,7 +97,7 @@ void Menu::switch_menu() {
 		file_menu();
 		break;
 	case end:
-		sleep_delay();
+		//sleep_delay();
 		exit(0);
 		break;
 	default:

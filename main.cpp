@@ -2,12 +2,10 @@
 #include "menu.h"
 
 int main(){
+    cout << "이거 되냐?" << endl;
     Menu todoing;
-
-    /*todoing.test();*/
 
     while (true) {
         todoing.running();
     }
-    return 0;
 }
