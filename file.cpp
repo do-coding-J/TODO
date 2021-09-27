@@ -81,7 +81,7 @@ void File::spliter(string token)
 {
 	index++;
 	switch (index) // 저장장소
-	{
+	{ 
 	case 1:
 		// 이름
 		temp_struct.todo_name = token;
