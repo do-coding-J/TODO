@@ -185,8 +185,6 @@ void Todo::todo_print(Todo_line temp)
     cout << "작성시간 : "; print_todo_time(temp.todo_pt); cout << endl;
 }
 
-
-
 void Todo::todo_show()
 {
     system("cls");
@@ -248,10 +246,9 @@ void Todo::todo_edit()
         cout << "편집할 항목을 선택하세요. : ";
         cin >> temp;
         view_num = stoi(temp)-1;
-        cout << "1. 일정     : " << Todo_lines[view_num].todo_name << endl;
-        cout << "2. 시작시간 : "; print_todo_time(Todo_lines[view_num].todo_st); cout << endl;
-        cout << "3. 종료시간 : "; print_todo_time(Todo_lines[view_num].todo_et); cout << endl;
-        cout << "4. 일정태그 : " << Todo_lines[view_num].todo_tag << endl;
+
+        system("cls");
+        todo_print(Todo_lines[view_num]);
 
         cout << "편집할 항목을 선택하세요. : ";
         cin >> temp;

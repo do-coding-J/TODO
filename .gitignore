@@ -2,10 +2,7 @@
 # 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
 ################################################################################
 
-/.vs/Todo/v16/Browse.VC.db-shm
-/.vs/Todo/v16/Browse.VC.opendb
-/.vs/Todo/v16/Browse.VC.db-wal
-/.vs/Todo/v16/
+/.vs/
 /.git/
 /.vscode/
 /Debug/
